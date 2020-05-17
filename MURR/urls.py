@@ -24,5 +24,7 @@ admin.site.index_title = 'Admin Area'
 
 
 urlpatterns = [
+    path('', include('pages.urls')),
+
     path('admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
